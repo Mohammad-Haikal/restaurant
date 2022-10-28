@@ -1,0 +1,62 @@
+// AOS
+@import "~aos/dist/aos.css";
+
+// Icons
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+
+.resMinVhHeight{
+    min-height: 100vh;
+}
+
+.active, .page-link{
+    color: #DC3545 !important;
+}
+
+.active > .page-link{
+    color: #ffffff !important;
+    background-color: #DC3545;
+    border-color: #DC3545;
+}
+
+.pagination{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    // justify-content: center;
+}
+
+.bg-img{
+    min-height:200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-filter-layer{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.56);
+}
+
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+
+// 576px or high (all except for phones)
+@media (min-width: 576px) {
+    .balanced-img{
+        height: 150px;
+    }
+}
+
+// 760px or less (phones)
+@media (max-width: 760px ){
+    .resMinVhHeight{
+        min-height: unset;
+    }
+}
