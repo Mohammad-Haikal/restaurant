@@ -52,6 +52,11 @@
             <div class="col mb-3">
                 <h5>Pages Menu</h5>
                 <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Home</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Features</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Pricing</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">FAQs</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">About</a></li>
                 </ul>
             </div>
 
@@ -59,7 +64,6 @@
                 <h5>Terms and Conditions</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Home</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Features</a></li>
                     <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">About</a></li>
                 </ul>
             </div>
