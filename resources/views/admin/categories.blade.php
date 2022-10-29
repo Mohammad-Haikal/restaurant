@@ -56,7 +56,7 @@
 
                     <div class="mb-2">
                         <label class="form-label" for="img">Image</label>
-                        <input class="form-control" id="img" name="img" type="file" accept="image/png, image/jpeg" required>
+                        <input class="form-control" id="img" name="img" type="file" accept="image/png, image/jpeg, image/jpg, image/gif, image/webp" required>
                     </div>
 
                 </div>

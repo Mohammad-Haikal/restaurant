@@ -46,69 +46,70 @@
                 <a class="d-flex align-items-center link-dark text-decoration-none mb-3" href="/">
                     <h2>{{ env('NAME') }}</h2>
                 </a>
-                <p class="text-muted">Copyright &copy; 2022 {{ env('NAME') }}. All rights reserved</p>
+                <p class="">See <a class="text-decoration-none active" href="/about">Restaurant Description</a></p>
             </div>
 
             <div class="col mb-3">
-                <h5>Pages Menu</h5>
+                <h5>Links</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Home</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Features</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Pricing</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">FAQs</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">About</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/">Home</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/about">About Us</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/menu">Menu</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/cart">My Basket</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Reach Us</a></li>
                 </ul>
             </div>
 
             <div class="col mb-3">
-                <h5>Terms and Conditions</h5>
+                <h5>Support</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Home</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">Features</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link text-muted p-0" href="#">About</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Terms and Conditions</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Privacy Policy</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Return and exchange</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Shipping and delivery</a></li>
                 </ul>
             </div>
 
             <div class="col mb-3">
-                <h5>Contact Us</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="p-1 list-group-item bg-light">
+                <h5>Reach Us</h5>
+                <ul class="nav flex-column">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-telephone"></i>
                             <span>0654231232</span>
                         </a>
                     </li>
-                    <li class="p-1 list-group-item bg-light">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-facebook"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 list-group-item bg-light">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-instagram"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 list-group-item bg-light">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-whatsapp"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    {{-- <li class="p-1 list-group-item bg-light">
+                    {{-- <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-youtube"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 list-group-item bg-light">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-messenger"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 list-group-item bg-light">
+                    <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-google"></i>
                             <span>{{ env('NAME') }}</span>
@@ -119,7 +120,8 @@
         </footer>
     </div>
     <div class="d-flex justify-content-center align-items-center py-2 bg-light">
-        <p class="text-muted m-0">Designed & Developed by MUH HL</p>
+        {{-- <p class="text-muted m-0">Designed & Developed by MUH HL</p> --}}
+        <p class="text-muted m-0">Copyright &copy; 2022 {{ env('NAME') }}. All rights reserved</p>
     </div>
 </body>
 

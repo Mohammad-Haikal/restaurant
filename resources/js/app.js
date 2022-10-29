@@ -11,4 +11,8 @@ $(function () {
     });
 
     $('#flash-message').delay(1700).fadeOut();
+
+    $('form').submit(function() {
+        $(this).find(":submit").prop('disabled',true);
+      });
 });
