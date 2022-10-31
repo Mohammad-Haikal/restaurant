@@ -32,6 +32,9 @@
     {{-- Flash Message --}}
     <x-flash-message />
 
+    {{-- Demo Message --}}
+    <x-demo-message />
+
     <div class="container mt-5">
         {{-- coming soon --}}
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-4 bg-light">
