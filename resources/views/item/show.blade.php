@@ -22,7 +22,7 @@
         <h2 class="mb-3">{{ $item['title'] }}</h2>
         <div class="row">
             <div class="col-8 col-md-4 mb-3">
-                <img class="img-fluid" src="{{ asset('storage/' . $item['img']) }}" alt="img">
+                <img class="img-fluid" src="{{ asset( $item['img']) }}" alt="img">
             </div>
             <div class="col-md-8">
                 <h4>Description:</h4>

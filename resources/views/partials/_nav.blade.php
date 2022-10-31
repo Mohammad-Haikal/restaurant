@@ -15,9 +15,6 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">About Us</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ request()->is('menu') ? 'active' : '' }}" id="menu" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Menu</a>
                     <div class="dropdown-menu" aria-labelledby="menu">
@@ -29,6 +26,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('cart') ? 'active' : '' }}" href="/cart">My Basket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">About Us</a>
                 </li>
                 <li class="nav-item">
                     {{-- coming soon --}}

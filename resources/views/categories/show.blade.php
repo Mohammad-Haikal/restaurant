@@ -1,5 +1,5 @@
 <x-template>
-    <div class="position-relative bg-img d-flex justify-content-center align-items-center mb-2 overflow-hidden text-white shadow" style="background-image: url('{{ asset('storage/' . $category['img']) }}');">
+    <div class="position-relative bg-img d-flex justify-content-center align-items-center mb-2 overflow-hidden text-white shadow" style="background-image: url('{{ asset( $category['img']) }}');">
         <div class="bg-filter-layer"></div>
         <h1 class="text-capitalize" style="z-index: 1;">{{ $category['name'] }}</h1>
     </div>

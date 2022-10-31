@@ -93,7 +93,7 @@
                     <tbody>
                         @foreach ($orderItems as $item)
                             <tr class="align-items-center">
-                                <td><a href="/item/{{ $item['item_id'] }}"><img class="h-auto" src="{{ asset('storage/' . $item->item['img']) }}" alt="image" style="width: 50px"></a></td>
+                                <td><a href="/item/{{ $item['item_id'] }}"><img class="h-auto" src="{{ asset( $item->item['img']) }}" alt="image" style="width: 50px"></a></td>
                                 <td class="align-middle">
                                     <p class="mb-0">{{ $item->item['title'] }}</p>
                                 </td>

@@ -34,13 +34,6 @@
 
     <div class="container mt-5">
         {{-- coming soon --}}
-
-        {{-- <footer class="bg-light border-top mt-auto py-3">
-            <div class="text-muted d-flex flex-column flex-md-row justify-content-center align-items-start container">
-                <p class="me-auto mb-0"></p>
-                <p class="ms-md-auto mb-0">Designed & Developed by MUH HL</p>
-            </div>
-        </footer> --}}
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-4 bg-light">
             <div class="col-md-4 mb-3">
                 <a class="d-flex align-items-center link-dark text-decoration-none mb-3" href="/">
@@ -53,9 +46,9 @@
                 <h5>Links</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/">Home</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/about">About Us</a></li>
                     <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/menu">Menu</a></li>
                     <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/cart">My Basket</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="/about">About Us</a></li>
                     <li class="nav-item mb-2"><a class="nav-link link-secondary p-0" href="#">Reach Us</a></li>
                 </ul>
             </div>
@@ -76,7 +69,7 @@
                     <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-telephone"></i>
-                            <span>0654231232</span>
+                            <span>065423132</span>
                         </a>
                     </li>
                     <li class="p-1 nav-item bg-light">
@@ -88,13 +81,13 @@
                     <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-instagram"></i>
-                            <span>{{ env('NAME') }}</span>
+                            <span>{{'@'.env('NAME') }}</span>
                         </a>
                     </li>
                     <li class="p-1 nav-item bg-light">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-whatsapp"></i>
-                            <span>{{ env('NAME') }}</span>
+                            <span>065423132</span>
                         </a>
                     </li>
                     {{-- <li class="p-1 nav-item bg-light">

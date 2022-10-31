@@ -5,7 +5,7 @@
             <img class="position-absolute top-0 start-0 h-100" style="opacity: 0.1" src="{{ asset('imgs/home-bg.jpg') }}" alt="">
             <div class="d-flex flex-column container flex-md-row justify-content-center">
                 <div class="col-md-6 mb-md-0 d-flex flex-column justify-content-center align-items-center align-items-lg-start mb-5" style="z-index: 2" data-aos="fade-up">
-                    <h1 class="mb-0 py-2 text-center text-lg-center " >Welcome to {{ env('NAME') }} Restaurant!</h1>
+                    <h1 class="mb-0 py-2 text-center text-lg-center " >Welcome to {{ env('NAME') }}!</h1>
                     <p class="mb-0 py-2 text-center" >{{__('words.home-title')}}</p>
                     @include('partials._search-bar')
                 </div>

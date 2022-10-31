@@ -1,7 +1,7 @@
 <x-template>
     <main class="container mt-3">
         <h1>Update Item</h1>
-        <img class="img-fluid col-md-4 mb-3 rounded shadow-sm" src="{{ asset('storage/' . $item['img']) }}" alt="">
+        <img class="img-fluid col-md-4 mb-3 rounded shadow-sm" src="{{ asset( $item['img']) }}" alt="">
         <form action="/updateItem/{{ $item['id'] }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')

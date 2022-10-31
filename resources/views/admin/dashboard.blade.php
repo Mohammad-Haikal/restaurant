@@ -36,7 +36,7 @@
 
                                     <tr class="align-items-center">
                                         <td>
-                                            <a href="/item/{{ $item['id'] }}"><img class="h-auto" src="{{ asset('storage/' . $item['img']) }}" alt="image" style="width: 50px"></a>
+                                            <a href="/item/{{ $item['id'] }}"><img class="h-auto" src="{{ asset( $item['img']) }}" alt="image" style="width: 50px"></a>
                                         </td>
                                         <td class="align-middle">
                                             <p class="mb-0">{{ $item['title'] }}</p>
