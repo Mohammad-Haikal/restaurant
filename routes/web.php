@@ -127,3 +127,22 @@ Route::prefix('/api')->group(function () {
     Route::get('/orders', [ApiController::class, 'orders'])->middleware('admin');
     Route::get('/orderItems', [ApiController::class, 'orderItems'])->middleware('admin');
 });
+
+
+// Laravel Excel
+// Route::get('users/export/', [UserController::class, 'export']);
+
+
+// Drive
+// Route::get('test', function () {
+    // dd(Storage::disk('google')->put('story.jpg', File::get("imgs/story.jpg")));
+    // dd(Storage::disk('google')->put('laravel.docx', 'Hello Laravel'));
+
+    // $excelFile = Storage::disk('google')->get("1-40NCdbUIjlTsULmV4ZUvn3mLHOLlD3b");
+    // File::put('tareq.xlsx', $excelFile);
+// });
+
+
+// Socialite - Google
+Route::get('/redirect', [UserController::class, 'redirectToGoogle']);
+Route::get('/callback', [UserController::class, 'handleGoogleCallback']);
