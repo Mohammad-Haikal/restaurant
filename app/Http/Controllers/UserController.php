@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
+use App\Exports\UsersExport;
+use Exception;
+use Laravel\Socialite\Facades\Socialite;
+use Maatwebsite\Excel\Facades\Excel;
+
 class UserController extends Controller
 {
     public function create()
@@ -58,10 +63,10 @@ class UserController extends Controller
 
         if (Auth::attempt($formFields)) {
             $request->session()->regenerate();
-            if(Auth::user()->role){
+            if (Auth::user()->role) {
                 return redirect('dashboard')->with('message', 'you are now logged in!');
             }
-            return redirect(session()->get('prevLink', '/'))->with('message', 'you are now logged in!');
+            return redirect(session()->get('prevLink', '/'))->with('message', 'you are now logged in as admin!');
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
@@ -96,7 +101,7 @@ class UserController extends Controller
             return abort(401);
         }
 
-        if (!password_verify( $request['current_password'] , $user['password'] )) {
+        if (!password_verify($request['current_password'], $user['password'])) {
             return back()->withErrors([
                 'current_password' => 'current password is wrong'
             ]);
@@ -111,5 +116,52 @@ class UserController extends Controller
 
         $user->update($formFields);
         return redirect('/')->with('message', 'Information Saved!');
+    }
+
+    public function export()
+    {
+        return Excel::download(new UsersExport, 'items.xlsx');
+    }
+
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogleCallback()
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+        } catch (Exception $e) {
+            return redirect('/login');
+        }
+
+        // // only allow people with @company.com to login
+        // if (explode("@", $user->email)[1] !== 'company.com') {
+        //     return redirect()->to('/');
+        // }
+
+        // check if they're an existing user
+        $existingUser = User::where('email', $user->email)->first();
+
+        if ($existingUser) {
+            // log them in
+            Auth::login($existingUser, true);
+        } else {
+            // create a new user
+            $newUser = User::create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'google_id'=> $user->id,
+                'password' => encrypt('')
+            ]);
+            Auth::login($newUser, true);
+        }
+
+        // Redirect
+        if (Auth::user()->role) {
+            return redirect('dashboard')->with('message', 'you are now logged in as admin!');
+        }
+        return redirect(session()->get('prevLink', '/'))->with('message', 'you are now logged in!');
     }
 }

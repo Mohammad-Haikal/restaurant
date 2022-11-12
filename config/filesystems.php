@@ -28,6 +28,11 @@ return [
     |
     */
 
+    // ...
+    'cloud' => 'google', // Optional: set Google Drive as default cloud storage
+    // ...
+
+
     'disks' => [
 
         'local' => [
@@ -52,6 +57,15 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+        ],
+
+        // Google Drive
+        'google' => [
+            'driver' => 'google',
+            'clientId' => env('GOOGLE_DRIVE_CLIENT_ID'),
+            'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET'),
+            'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN'),
+            'folderId' => env('GOOGLE_DRIVE_FOLDER_ID'),
         ],
 
     ],

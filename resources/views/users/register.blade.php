@@ -1,7 +1,7 @@
 <x-template>
     <div class="h-100 d-flex align-items-center container">
-        <div class="col-12 col-md-8 my-5 mx-auto rounded border bg-white p-3 shadow-sm">
-            <h3 class="mb-3 pb-2">Register</h3>
+        <div class="col-12 col-md-6 my-5 mx-auto rounded border bg-white p-3 shadow-sm">
+            <h3 class="mb-3 pb-2">Create New Account</h3>
             <form action="/users" method="post">
                 @csrf
 
@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row g-2">
                     <div class="col-md-6 mb-3 pb-2">
                         <div class="form-outline">
                             <label class="form-label" for="password">Password</label>
@@ -47,13 +47,15 @@
                 </div>
 
                 <div class="mb-3">
-                    <input class="btn btn-danger col-5" type="submit" value="Sign up" />
-                </div>
-
-                <div>
-                    <p class="text-muted m-0">Already have an account? <a href="/login">Login</a></p>
+                    <input class="btn btn-danger col-12" type="submit" value="Sign up" />
                 </div>
             </form>
+
+            <hr class="mx-auto mt-5">
+
+            <div>
+                <p class="text-muted m-0 text-center">Already have an account? <a href="/login">Login</a></p>
+            </div>
         </div>
     </div>
 </x-template>
