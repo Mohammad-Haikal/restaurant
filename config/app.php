@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        // Excel
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        // Google (for google login)
+        App\Providers\GoogleDriveServiceProvider::class,
     ],
 
     /*
@@ -230,6 +235,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+
+        // Excel
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        // Socialite (for google login)
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
