@@ -9,6 +9,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Models\Category;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -135,11 +136,11 @@ Route::prefix('/api')->group(function () {
 
 // Drive
 // Route::get('test', function () {
-    // dd(Storage::disk('google')->put('story.jpg', File::get("imgs/story.jpg")));
-    // dd(Storage::disk('google')->put('laravel.docx', 'Hello Laravel'));
+// dd(Storage::disk('google')->put('story.jpg', File::get("imgs/story.jpg")));
+// dd(Storage::disk('google')->put('laravel.docx', 'Hello Laravel'));
 
-    // $excelFile = Storage::disk('google')->get("1-40NCdbUIjlTsULmV4ZUvn3mLHOLlD3b");
-    // File::put('tareq.xlsx', $excelFile);
+// $excelFile = Storage::disk('google')->get("1-40NCdbUIjlTsULmV4ZUvn3mLHOLlD3b");
+// File::put('tareq.xlsx', $excelFile);
 // });
 
 

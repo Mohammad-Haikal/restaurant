@@ -37,7 +37,7 @@
 
     <div class="container mt-5">
         {{-- coming soon --}}
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-4 bg-light">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top bg-light py-4">
             <div class="col-md-4 mb-3">
                 <a class="d-flex align-items-center link-dark text-decoration-none mb-3" href="/">
                     <h2>{{ env('NAME') }}</h2>
@@ -69,25 +69,25 @@
             <div class="col mb-3">
                 <h5>Reach Us</h5>
                 <ul class="nav flex-column">
-                    <li class="p-1 nav-item bg-light">
+                    <li class="nav-item bg-light p-1">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-telephone"></i>
                             <span>065423132</span>
                         </a>
                     </li>
-                    <li class="p-1 nav-item bg-light">
+                    <li class="nav-item bg-light p-1">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-facebook"></i>
                             <span>{{ env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 nav-item bg-light">
+                    <li class="nav-item bg-light p-1">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-instagram"></i>
-                            <span>{{'@'.env('NAME') }}</span>
+                            <span>{{ '@' . env('NAME') }}</span>
                         </a>
                     </li>
-                    <li class="p-1 nav-item bg-light">
+                    <li class="nav-item bg-light p-1">
                         <a class="text-reset text-decoration-none link-secondary" href="#">
                             <i class="fs-5 me-1 bi bi-whatsapp"></i>
                             <span>065423132</span>
@@ -115,7 +115,7 @@
             </div>
         </footer>
     </div>
-    <div class="d-flex justify-content-center align-items-center py-2 bg-light">
+    <div class="d-flex justify-content-center align-items-center bg-light py-2">
         {{-- <p class="text-muted m-0">Designed & Developed by MUH HL</p> --}}
         <p class="text-muted m-0">Copyright &copy; 2022 {{ env('NAME') }}. All rights reserved</p>
     </div>
