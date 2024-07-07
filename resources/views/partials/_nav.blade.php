@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand fs-4" href="/">
-            {{ env('NAME') }}
+            Alhanayen
         </a>
         <button class="navbar-toggler d-lg-none" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" type="button" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,10 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">About Us</a>
                 </li>
-                <li class="nav-item">
-                    {{-- coming soon --}}
+                {{-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Reach Us</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>
